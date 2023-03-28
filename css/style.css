@@ -47,3 +47,39 @@ body {
     font-size: 18px;
     line-height: 21px;
 }
+
+.bottom-bar {
+    width: 100%;
+    height: 92px;
+    background-color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+button {
+    background-color: #CBCBCB;
+    
+    width: 364px;
+    height: 61px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 50px;
+}
+
+button > * {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
