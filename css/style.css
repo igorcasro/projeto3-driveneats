@@ -94,6 +94,13 @@ img {
     line-height: 32px;
 }
 
+.row-of-items {
+    width: 100%;
+
+    display: flex;
+    overflow-x: scroll;
+}
+
 .item-box {
     margin-top: 17px;
     margin-left: 16px;
@@ -109,6 +116,10 @@ img {
     border-radius: 9px;
 
     padding: 14px;
+}
+
+.extra-margin {
+    margin-right: 19px;
 }
 
 .name {
