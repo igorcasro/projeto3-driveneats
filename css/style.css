@@ -66,7 +66,7 @@ img {
     flex-direction: column;
 }
 
-.foods {
+.food {
     margin-top: 31px;
 
     width: 100%;
@@ -117,7 +117,7 @@ img {
     background-color: #FFFFFF;
     border-radius: 9px;
 
-    padding: 14px;
+    padding: 8px;
 
     position: relative;
 }
