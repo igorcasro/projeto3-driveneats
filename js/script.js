@@ -3,8 +3,6 @@ function selectItem (parentClass, itemClass) {
     // Search for the selected card
     // If there's a button selected remove the class selected and add hidden to the check button from the card
     const selectedBefore = document.querySelector(parentClass +  " .selected");
-    
-    console.log(selectedBefore);
     if(selectedBefore !== null) {
         selectedBefore.classList.remove("selected");
            
@@ -18,6 +16,8 @@ function selectItem (parentClass, itemClass) {
     const activateCheck = document.querySelector(itemClass + " .check");
 
     activateCheck.classList.remove("hidden");
+
+    checkIfAllActive('.food', '.drinks', '.desserts');
 }
 
 function checkIfAllActive(food, drink, dessert) {
@@ -26,13 +26,11 @@ function checkIfAllActive(food, drink, dessert) {
     const checkDrink = document.querySelector(drink + " .selected");
     const checkDessert = document.querySelector(dessert + " .selected");
 
-    
-
     if(checkFood !== null && checkDrink !== null && checkDessert !== null) {
-        selectButton = document.querySelector(".select-button");
+        const selectButton = document.querySelector(".select-button");
         selectButton.classList.add("hidden");
     
-        selectedButton = document.querySelector(".selected-button");
+        const selectedButton = document.querySelector(".selected-button");
         selectedButton.classList.remove("hidden");
     }    
 }
