@@ -28,21 +28,21 @@
         <div class="food">
             <h2 class="category-description righteous-font">Primeiro, seu prato</h2>
             <div class="row-of-items">
-                <div onclick="selectItem('.food', '.chicken')" class="item-box chicken" data-test="dish">
+                <div onclick="selectItem('.food', '.chicken'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box chicken" data-test="dish">
                     <img src="./img/frango_yin_yang.png">
                     <p class="name" data-test="item-name">Frango Yin Yang</p>
                     <p class="description">Um pouco de batata, um pouco de salada</p>
                     <p class="value" data-test="item-price">R$ 14,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.food', '.beef')" class="item-box beef" data-test="dish">
+                <div onclick="selectItem('.food', '.beef'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box beef" data-test="dish">
                     <img src="./img/frango_yin_yang.png">
                     <p class="name" data-test="item-name">Carne</p>
                     <p class="description">Um pouco de batata, um pouco de salada</p>
                     <p class="value" data-test="item-price">R$ 14,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.food', '.fish')" class="item-box fish" data-test="dish">
+                <div onclick="selectItem('.food', '.fish'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box fish" data-test="dish">
                     <img src="./img/frango_yin_yang.png">
                     <p class="name" data-test="item-name">Peixe</p>
                     <p class="description">Um pouco de batata, um pouco de salada</p>
@@ -55,21 +55,21 @@
         <div class="drinks">
             <h2 class="category-description righteous-font">Agora, sua bebida</h2>
             <div class="row-of-items">
-                <div onclick="selectItem('.drinks', '.coke')" class="item-box coke" data-test="drink">
+                <div onclick="selectItem('.drinks', '.coke'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box coke" data-test="drink">
                     <img src="./img/coca-cola.png">
                     <p class="name" data-test="item-name">Coquinha gelada</p>
                     <p class="description">Lata 350ml</p>
                     <p class="value" data-test="item-price">R$ 4,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.drinks', '.soda')" class="item-box soda" data-test="drink">
+                <div onclick="selectItem('.drinks', '.soda'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box soda" data-test="drink">
                     <img src="./img/coca-cola.png">
                     <p class="name" data-test="item-name">Refri gelado</p>
                     <p class="description">Lata 350ml, escolhida aleatoriamente</p>
                     <p class="value" data-test="item-price">R$ 4,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.drinks', '.pepsi')" class="item-box pepsi" data-test="drink">
+                <div onclick="selectItem('.drinks', '.pepsi'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box pepsi" data-test="drink">
                     <img src="./img/coca-cola.png">
                     <p class="name" data-test="item-name">Pepsinha gelada</p>
                     <p class="description">Lata 350ml</p>
@@ -82,21 +82,21 @@
         <div class="desserts">
             <h2 class="category-description righteous-font">Por fim, sua sobremesa</h2>
             <div class="row-of-items">
-                <div onclick="selectItem('.desserts', '.pudding')" class="item-box pudding" data-test="dessert">
+                <div  onclick="selectItem('.desserts', '.pudding'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box pudding" data-test="dessert">
                     <img src="./img/pudim.png">
                     <p class="name" data-test="item-name">Pudimzin</p>
                     <p class="description">Só um pudim sendo um pudim</p>
                     <p class="value" data-test="item-price">R$ 7,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.desserts', '.chocolate')" class="item-box chocolate" data-test="dessert">
+                <div onclick="selectItem('.desserts', '.chocolate'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box chocolate" data-test="dessert">
                     <img src="./img/pudim.png">
                     <p class="name" data-test="item-name">Chocolate</p>
                     <p class="description">Só um pudim sendo um pudim</p>
                     <p class="value" data-test="item-price">R$ 7,90</p>
                     <ion-icon class="check hidden" name="checkmark-circle"></ion-icon>
                 </div>
-                <div onclick="selectItem('.desserts', '.yogurt')" class="item-box yogurt" data-test="dessert">
+                <div onclick="selectItem('.desserts', '.yogurt'); checkIfAllActive('.food', '.drinks', '.desserts' );" class="item-box yogurt" data-test="dessert">
                     <img src="./img/pudim.png">
                     <p class="name" data-test="item-name">Yogurt</p>
                     <p class="description">Só um pudim sendo um pudim</p>
@@ -108,11 +108,11 @@
         </div>
         <div class="separator"></div>
         <div class="bottom-bar">
-            <button class="select-button" data-test="order-btn">
+            <button  class="select-button" data-test="order-btn">
                 <p>Selecione os 3 itens</p>
                 <p>para fechar o pedido</p>
             </button>
-            <button class="close-order-button hidden" data-test="order-btn">
+            <button class="selected-button hidden" data-test="order-btn">
                 <p>Fechar pedido</p>
             </button>
         </div>

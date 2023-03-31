@@ -19,3 +19,20 @@ function selectItem (parentClass, itemClass) {
 
     activateCheck.classList.remove("hidden");
 }
+
+function checkIfAllActive(food, drink, dessert) {
+
+    const checkFood = document.querySelector(food + " .selected");
+    const checkDrink = document.querySelector(drink + " .selected");
+    const checkDessert = document.querySelector(dessert + " .selected");
+
+    
+
+    if(checkFood !== null && checkDrink !== null && checkDessert !== null) {
+        selectButton = document.querySelector(".select-button");
+        selectButton.classList.add("hidden");
+    
+        selectedButton = document.querySelector(".selected-button");
+        selectedButton.classList.remove("hidden");
+    }    
+}

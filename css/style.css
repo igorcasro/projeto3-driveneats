@@ -216,7 +216,7 @@ img {
     line-height: 23px;
 }
 
-.close-order-button {
+.selected-button {
     background-color: #32B72F;
 
     width: 364px;
@@ -231,7 +231,7 @@ img {
     border-radius: 50px;
 }
 
-.close-order-button p {
+.selected-button p {
     color: #FFFFFF;
     font-weight: 700;
     font-size: 20px;
