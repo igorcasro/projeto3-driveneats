@@ -1,3 +1,10 @@
+let foodName = '';
+let foodValue = '';
+let drinkName = '';
+let drinkValue = '';
+let dessertName = '';
+let dessertValue = '';
+
 function selectItem (parentClass, itemClass) {
     // Verify if already has a selected card
     // Search for the selected card
@@ -26,11 +33,25 @@ function checkIfAllActive(food, drink, dessert) {
     const checkDrink = document.querySelector(drink + " .selected");
     const checkDessert = document.querySelector(dessert + " .selected");
 
+    
+
+
     if(checkFood !== null && checkDrink !== null && checkDessert !== null) {
         const selectButton = document.querySelector(".select-button");
         selectButton.classList.add("hidden");
     
         const selectedButton = document.querySelector(".selected-button");
         selectedButton.classList.remove("hidden");
+
+        foodName = checkFood.querySelector('.name');
+        foodValue = checkFood.querySelector('.value');
+        drinkName = checkDrink.querySelector('.name');
+        drinkValue = checkDrink.querySelector('.value');
+        dessertName = checkDessert.querySelector('.name');
+        dessertValue = checkDessert.querySelector('.value');
     }    
+}
+
+function sendMessage() {
+
 }
