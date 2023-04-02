@@ -76,7 +76,7 @@ function sendMessage() {
     const foodMessage = '- Prato: ' + foodName;
     const drinkMessage = '- Bebida: ' + drinkName;
     const dessertMessage = '- Sobremesa: ' + dessertName;
-    const totalOrder = 'Total: ' + totalValue.replace(".", ",");
+    const totalOrder = 'Total: R$ ' + totalValue.replace(".", ",");
     const endName = 'Nome: ' + name;
     const endAddress = 'Endereço: ' + address;
 
