@@ -6,6 +6,7 @@ let dessertName = '';
 let dessertValue = '';
 let name = '';
 let address = '';
+let totalValue = 0.0;
 
 function selectItem (parentClass, itemClass) {
     // Verify if already has a selected card
@@ -59,7 +60,38 @@ function parseValues() {
     const parsedDrinkValue = Number(drinkValue.substring(2, drinkValue.length - 1).replace(",", "."));
     const parsedDessertValue = Number(dessertValue.substring(2, dessertValue.length - 1).replace(",", "."));
 
-    return (parsedFoodValue + parsedDrinkValue + parsedDessertValue).toFixed(2);
+    return (parsedFoodValue + parsedDrinkValue + parsedDessertValue).toFixed(2).replace(".", ",");
+}
+
+function openConfirmPanel() {
+
+    const hiddenPanel = document.querySelector(".confirm-order");
+    hiddenPanel.classList.toggle("hidden");
+
+    const setPlaneName = document.querySelector(".plate-name");
+    setPlaneName.innerHTML = foodName;
+    const setPlateValue = document.querySelector(".plate-value");
+    setPlateValue.innerHTML = foodValue.substring(2, foodValue.length - 1) + "0";
+
+    const setDrinkName = document.querySelector(".drink-name");
+    setDrinkName.innerHTML = drinkName;
+    const setDrinkValue = document.querySelector(".drink-value");
+    setDrinkValue.innerHTML = drinkValue.substring(2, drinkValue.length - 1) + "0";
+
+    const setDessertName = document.querySelector(".dessert-name");
+    setDessertName.innerHTML = dessertName;
+    const setDessertValue = document.querySelector(".dessert-value");
+    setDessertValue.innerHTML = dessertValue.substring(2, dessertValue.length - 1) + "0";
+
+    totalValue = parseValues();
+
+    const setTotalValue = document.querySelector(".total-value");
+    setTotalValue.innerHTML = "R$ " + totalValue;
+}
+
+function closeConfirmPanel() {
+    const hiddenPanel = document.querySelector(".confirm-order");
+    hiddenPanel.classList.toggle("hidden");
 }
 
 function sendMessage() {
@@ -67,7 +99,7 @@ function sendMessage() {
     name = prompt("Insira seu nome, por favor:");
     address = prompt("Por último, seu endereço:");
 
-    const totalValue = parseValues();
+    totalValue = parseValues();
 
     const cellphoneNumber = 5519993027135;
 
@@ -76,7 +108,7 @@ function sendMessage() {
     const foodMessage = '- Prato: ' + foodName;
     const drinkMessage = '- Bebida: ' + drinkName;
     const dessertMessage = '- Sobremesa: ' + dessertName;
-    const totalOrder = 'Total: R$ ' + totalValue.replace(".", ",");
+    const totalOrder = 'Total: R$ ' + totalValue;
     const endName = 'Nome: ' + name;
     const endAddress = 'Endereço: ' + address;
 
