@@ -112,9 +112,34 @@
                 <p>Selecione os 3 itens</p>
                 <p>para fechar o pedido</p>
             </button>
-            <button onclick="sendMessage();" class="selected-button hidden" data-test="order-btn">
+            <button onclick="openConfirmPanel();" class="selected-button hidden" data-test="order-btn">
                 <p>Fechar pedido</p>
             </button>
+        </div>
+        <div class="confirm-order hidden">
+            <div class="confirm-panel" data-test="confirm-order-modal">
+                <div class="confirm-title">
+                    <p>Confirme seu pedido</p>
+                </div>
+                <div class="order-line">
+                    <p class="plate-name">Nome do Prato</p>
+                    <p class="plate-value">Valor do Prato</p>
+                </div>
+                <div class="order-line">
+                    <p class="drink-name">Nome da Bebida</p>
+                    <p class="drink-value">Valor da Bebida</p>
+                </div>
+                <div class="order-line">
+                    <p class="dessert-name">Nome Sobre</p>
+                    <p class="dessert-value">Valor Sobre</p>
+                </div>
+                <div class="order-line total-format">
+                    <p>TOTAL</p>
+                    <p class="total-value">R$ Valor Total</p>
+                </div>
+                <button data-test="confirm-order-btn" onclick="sendMessage();" class="order">Tudo certo, pode pedir!</button>
+                <button data-test="cancel-order-btn" onclick="closeConfirmPanel();" class="cancel" >Cancelar</button>
+            </div>
         </div>
     </div>
 
